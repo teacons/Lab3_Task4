@@ -1,16 +1,22 @@
-package com.example.task2
+package com.example.task3
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
-abstract class MenuAppCompatActivity: AppCompatActivity() {
+abstract class MenuAppCompatActivity : AppCompatActivity() {
+
+    companion object {
+        const val key = "LifeCycle"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = this::class.java.simpleName
+        Log.d(key, "${this::class.java.simpleName} onCreate")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -27,5 +33,20 @@ abstract class MenuAppCompatActivity: AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(key, "${this::class.java.simpleName} onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d(key, "${this::class.java.simpleName} onPause")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(key, "${this::class.java.simpleName} onDestroy")
     }
 }
