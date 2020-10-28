@@ -1,4 +1,4 @@
-package com.example.task3
+package com.example.task4
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

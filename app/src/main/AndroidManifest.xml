@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.task3">
+    package="com.example.task4">
 
     <application
         android:allowBackup="true"
@@ -11,10 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="com.example.task3.ActivityAbout" />
-        <activity android:name="com.example.task3.Activity3" />
-        <activity android:name="com.example.task3.Activity2" />
-        <activity android:name="com.example.task3.Activity1">
+        <activity android:name=".ActivityEasterEgg" />
+        <activity android:name=".ActivityAbout" />
+        <activity android:name=".Activity3" />
+        <activity android:name=".Activity2" />
+        <activity android:name=".Activity1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
